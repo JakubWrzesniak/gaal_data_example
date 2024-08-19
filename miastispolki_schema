@@ -1,0 +1,429 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "jsonld_download_url": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "modified": {
+              "type": "string",
+              "minLength": 1
+            },
+            "visualization_types": {
+              "type": "array",
+              "items": {
+                "required": [],
+                "properties": {}
+              }
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "has_research_data": {
+              "type": "boolean"
+            },
+            "verified": {
+              "type": "string",
+              "minLength": 1
+            },
+            "files": {
+              "type": "array",
+              "uniqueItems": true,
+              "minItems": 1,
+              "items": {
+                "required": [
+                  "file_size",
+                  "format",
+                  "openness_score",
+                  "download_url"
+                ],
+                "properties": {
+                  "file_size": {
+                    "type": "number"
+                  },
+                  "format": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "compressed_file_format": {
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                  },
+                  "openness_score": {
+                    "type": "number"
+                  },
+                  "download_url": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            },
+            "has_dynamic_data": {
+              "type": "boolean"
+            },
+            "media_type": {
+              "type": "string",
+              "minLength": 1
+            },
+            "csv_file_url": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "file_size": {
+              "type": "number"
+            },
+            "language": {
+              "type": "string",
+              "minLength": 1
+            },
+            "has_high_value_data": {
+              "type": "boolean"
+            },
+            "format": {
+              "type": "string",
+              "minLength": 1
+            },
+            "regions": {
+              "type": "array",
+              "uniqueItems": true,
+              "minItems": 1,
+              "items": {
+                "required": [
+                  "hierarchy_label",
+                  "region_id",
+                  "name",
+                  "is_additional"
+                ],
+                "properties": {
+                  "hierarchy_label": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "region_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "is_additional": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            },
+            "openness_score": {
+              "type": "number"
+            },
+            "downloads_count": {
+              "type": "number"
+            },
+            "file_url": {
+              "type": "string",
+              "minLength": 1
+            },
+            "created": {
+              "type": "string",
+              "minLength": 1
+            },
+            "views_count": {
+              "type": "number"
+            },
+            "csv_file_size": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "jsonld_file_size": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "download_url": {
+              "type": "string",
+              "minLength": 1
+            },
+            "data_date": {
+              "type": "string",
+              "minLength": 1
+            },
+            "link": {
+              "type": "string",
+              "minLength": 1
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "supplements": {
+              "type": "array",
+              "items": {
+                "required": [],
+                "properties": {}
+              }
+            },
+            "category": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "special_signs": {
+              "type": "array",
+              "items": {
+                "required": [],
+                "properties": {}
+              }
+            },
+            "is_chart_creation_blocked": {
+              "type": "boolean"
+            },
+            "csv_download_url": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            },
+            "contains_protected_data": {
+              "type": "boolean"
+            },
+            "jsonld_file_url": {
+              "type": "object",
+              "properties": {},
+              "required": []
+            }
+          },
+          "required": [
+            "jsonld_download_url",
+            "modified",
+            "visualization_types",
+            "description",
+            "has_research_data",
+            "verified",
+            "files",
+            "has_dynamic_data",
+            "media_type",
+            "csv_file_url",
+            "file_size",
+            "language",
+            "has_high_value_data",
+            "format",
+            "regions",
+            "openness_score",
+            "downloads_count",
+            "file_url",
+            "created",
+            "views_count",
+            "csv_file_size",
+            "jsonld_file_size",
+            "download_url",
+            "data_date",
+            "link",
+            "title",
+            "supplements",
+            "category",
+            "special_signs",
+            "is_chart_creation_blocked",
+            "csv_download_url",
+            "contains_protected_data",
+            "jsonld_file_url"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relationships": {
+          "type": "object",
+          "properties": {
+            "dataset": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "type": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type"
+                  ]
+                },
+                "links": {
+                  "type": "object",
+                  "properties": {
+                    "related": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "related"
+                  ]
+                }
+              },
+              "required": [
+                "data",
+                "links"
+              ]
+            },
+            "institution": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "type": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type"
+                  ]
+                },
+                "links": {
+                  "type": "object",
+                  "properties": {
+                    "related": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "related"
+                  ]
+                }
+              },
+              "required": [
+                "data",
+                "links"
+              ]
+            }
+          },
+          "required": [
+            "dataset",
+            "institution"
+          ]
+        },
+        "links": {
+          "type": "object",
+          "properties": {
+            "self": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "self"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "attributes",
+        "type",
+        "relationships",
+        "links"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "server_time": {
+          "type": "string",
+          "minLength": 1
+        },
+        "language": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relative_uri": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "params": {
+          "type": "object",
+          "properties": {
+            "lang": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "lang"
+          ]
+        }
+      },
+      "required": [
+        "server_time",
+        "language",
+        "relative_uri",
+        "path",
+        "params"
+      ]
+    },
+    "jsonapi": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "version"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "self"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "meta",
+    "jsonapi",
+    "links"
+  ]
+}
